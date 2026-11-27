@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aldergrove</title>
-    <meta name="description" content="Aldergrove is the AI you run on your own computer and actually get work done with: free, private and offline, with one model tested for your kind of computer." />
+    <meta name="description" content="Aldergrove is an AI that runs on your Mac. It takes care of the small jobs in your day, answers with its sources and checks its own work, even offline." />
     <link rel="icon" type="image/svg+xml" href="./mark.svg" />
-    <script type="module" crossorigin src="./assets/main-CIK4BOqt.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-CWPBP8TO.css">
+    <script type="module" crossorigin src="./assets/main-DprTvorV.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-CiTaa-Jf.css">
   </head>
   <body>
     <header class="nav" id="top">
       <nav class="nav-links" id="nav-links" aria-label="Sections">
-        <a href="#linden">Linden 1</a>
+        <a href="./research/index.html#release">Linden 1</a>
         <a href="./product/index.html">Product</a>
         <a href="./research/index.html">Research</a>
         <a href="./privacy/index.html">Privacy</a>
@@ -32,17 +32,15 @@
       <section class="hero">
         <div class="hero-scene" aria-hidden="true"></div>
         <div class="hero-inner wrap">
-          <p class="eyebrow reveal">Linden 1 &middot; runs on your Mac</p>
-          <h1 class="display reveal">
-            Intelligence that lives on <em>your</em> computer.
-          </h1>
+          <p class="eyebrow reveal">Introducing Aldergrove for Mac</p>
+          <h1 class="display hero-title reveal">Above the <em>cloud.</em></h1>
           <p class="lede reveal">
-            Aldergrove is the AI on your own computer that takes care of the small jobs: reminders,
-            follow-ups, mail and quick answers. Free to run all day, private, and tested for your kind of computer.
+            Aldergrove is an AI that runs on your Mac. It takes care of the small jobs in your day, answers with its
+            sources and checks its own work, even with the Wi-Fi off.
           </p>
           <div class="cta-row reveal">
             <a class="btn btn-accent" href="#get" data-to-signup>Get the Mac beta</a>
-            <a class="btn btn-ghost" href="#research">Read the lab results</a>
+            <a class="btn btn-ghost" href="#jobs">See it work</a>
           </div>
         </div>
 
@@ -92,135 +90,88 @@
         </div>
       </section>
 
-      <!-- Release note, lab style -->
-      <section class="section wrap" id="linden">
-        <div class="release">
-          <div class="release-meta">
-            <p class="eyebrow">Release</p>
-            <p class="mono faint">November 2026</p>
-          </div>
-          <div class="release-body">
-            <h2 class="h2">Linden 1 and Linden Coder 1</h2>
-            <p class="body">
-              One model does every job: answering, planning, coding and reviewing. In Chat it's Linden 1,
-              in Code it's Linden Coder 1. Aldergrove picks the version that fits your computer's memory,
-              downloads it with one button, and runs it in its own engine. No account, no server, no subscription.
-            </p>
-            <div class="stats">
-              <div class="stat">
-                <p class="stat-num">13<span>/13</span></p>
-                <p class="stat-label">Chat lab questions answered right</p>
-              </div>
-              <div class="stat">
-                <p class="stat-num">66<span>/71</span></p>
-                <p class="stat-label">hidden coding tests passed (4-bit)</p>
-              </div>
-              <div class="stat">
-                <p class="stat-num">0</p>
-                <p class="stat-label">bytes of your chats leave your computer with a local model</p>
-              </div>
-            </div>
-            <p class="fine">
-              Measured on an Apple M1 Max with 64 GB, November 2026. Chat lab: 8-bit model, median 2 min 27 s per
-              answer including web lookups. Coding: 58 of 71 with the 8-bit model, 66 of 71 with the 4-bit model.
-              Cloud models are optional; a chat that uses one sends that chat to its provider.
-            </p>
-          </div>
-        </div>
+      <!-- The statement: words light up as you scroll -->
+      <section class="statement wrap" aria-label="What Aldergrove is">
+        <p class="statement-text" data-scrub>
+          Your mail, your files, your questions. Answered by the computer in front of you, not a server somewhere else.
+        </p>
+      </section>
 
-        <div class="tiers">
-          <p class="tiers-lead">Aldergrove reads how much memory your Mac has and installs the largest version of Linden 1 that fits, with room left for your other apps.</p>
-          <ol class="scale" aria-label="What Aldergrove installs for each amount of memory">
-            <li><span class="scale-mem">8&ndash;16 GB</span><span class="scale-what">A smaller model</span></li>
-            <li><span class="scale-mem">24&ndash;48 GB</span><span class="scale-what">Linden 1, compact</span></li>
-            <li class="is-tested"><span class="scale-mem">64&ndash;96 GB</span><span class="scale-what">Linden 1</span><span class="scale-note">Tested in our lab</span></li>
-            <li><span class="scale-mem">128 GB+</span><span class="scale-what">Linden 1, full precision</span></li>
-          </ol>
+      <!-- A day of small jobs: the clock runs as you scroll -->
+      <section class="day" id="jobs" data-day>
+        <div class="day-sticky">
+          <div class="wrap day-grid">
+            <div class="day-copy">
+              <p class="eyebrow">Everyday jobs <span class="badge">Beta</span></p>
+              <h2 class="mega">Set it <em>once.</em></h2>
+              <p class="lede">
+                Reminders, schedules, follow-ups, mail and calendar run on their own through the day. They run on your Mac, so
+                a job that checks in every hour costs nothing. Anything that sends or books waits for your OK.
+              </p>
+              <p class="day-clock" aria-hidden="true"><span data-clock>07:59</span></p>
+            </div>
+            <ol class="day-feed" aria-label="A day of jobs Aldergrove ran">
+              <li class="job" data-at="08:00">
+                <p class="job-meta"><span>08:00</span><span>Every weekday</span></p>
+                <p class="job-title">Unanswered mail: 3 need a reply today</p>
+              </li>
+              <li class="job" data-at="11:40">
+                <p class="job-meta"><span>11:40</span><span>Reminder</span></p>
+                <p class="job-title">Call the bakery about Saturday's order</p>
+              </li>
+              <li class="job" data-at="15:00">
+                <p class="job-meta"><span>15:00</span><span>Follow-up</span></p>
+                <p class="job-title">Dana hasn't replied. A draft is ready.</p>
+                <p class="job-actions"><span class="btn btn-ink btn-sm">Review</span><span class="btn btn-ghost btn-sm">Later</span></p>
+              </li>
+              <li class="job" data-at="18:30">
+                <p class="job-meta"><span>18:30</span><span>Every evening</span></p>
+                <p class="job-title">Tomorrow: 2 meetings, the first at 9:30</p>
+              </li>
+              <li class="day-cost"><span>Ran on your Mac</span><b>$0.00</b></li>
+            </ol>
+          </div>
         </div>
       </section>
 
-      <!-- Product -->
-      <section class="section wrap" id="product">
-        <p class="eyebrow">Product</p>
-        <h2 class="h1">Small jobs, all day. <em>Free</em>, and private.</h2>
-
-        <!-- Everyday jobs -->
-        <div class="split">
-          <div class="split-copy">
-            <p class="eyebrow">Everyday jobs <span class="badge">Beta</span></p>
-            <h3 class="h2">It does the small jobs. Anything final asks first.</h3>
-            <p class="body">
-              Reminders, schedules, follow-ups, mail and calendar. It runs on your Mac, so a job that checks in every hour
-              costs nothing. Before anything is sent, posted, booked or deleted, one card shows who it goes to, the exact
-              content and whether it can be undone.
-            </p>
+      <!-- Offline -->
+      <section class="scene offline wrap" id="offline">
+        <div class="scene-copy">
+          <p class="eyebrow">Works offline</p>
+          <h2 class="mega">Turn off the <em>Wi-Fi.</em></h2>
+          <p class="lede">
+            The model is on your Mac, so it keeps working. Add a Wikipedia pack and it still answers with sources, on a plane,
+            in a cabin, anywhere.
+          </p>
+        </div>
+        <div class="scene-visual" aria-hidden="true">
+          <div class="wifi">
+            <span class="wifi-icon"><svg viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.2a9.5 9.5 0 0 1 13 0M8.6 15.4a5 5 0 0 1 6.8 0"/><circle cx="12" cy="18.6" r="1.1"/><path class="wifi-cut" d="M4 4l16 16"/></svg></span>
+            <span class="wifi-label">Wi-Fi</span>
+            <span class="toggle"><i></i></span>
           </div>
-          <div class="card-ask" aria-label="A confirmation card">
-            <p class="ask-title">Send this email?</p>
-            <dl class="ask-fields">
-              <div><dt>To</dt><dd>dana@studio.example</dd></div>
-              <div><dt>Subject</dt><dd>Thursday's draft</dd></div>
-            </dl>
-            <p class="ask-content">Hi Dana, the draft is attached. Could you look at section 2 before Friday?</p>
-            <p class="ask-undo">Once sent, this can't be taken back.</p>
-            <div class="ask-actions">
-              <span class="btn btn-ink btn-sm">Send</span>
-              <span class="btn btn-ghost btn-sm">Change</span>
-              <span class="btn btn-ghost btn-sm">Don't</span>
-            </div>
+          <div class="vis vis-answer">
+            <p class="va-q">Why is the sky blue?</p>
+            <div class="va-steps"><p><span class="va-dot"></span>Read offline Wikipedia: Rayleigh scattering <em>0.3 s</em></p></div>
+            <p class="va-a">Air molecules scatter blue light far more than red, so blue reaches your eyes from <b>every part of the sky</b>.</p>
+            <div class="va-src"><span>Wikipedia &middot; offline</span></div>
           </div>
         </div>
+      </section>
 
-        <div class="modes">
-          <article class="mode">
-            <header class="mode-head">
-              <span class="mode-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M5 5h14v10H9l-4 4z" /></svg>
-              </span>
-              <h3 class="h3">Chat</h3>
-            </header>
-            <p class="body">Everyday jobs, questions and documents, with answers you can check.</p>
-            <ul class="ticks">
-              <li>Reminders, schedules and follow-ups that run on their own</li>
-              <li>Mail and calendar with your own sign-in</li>
-              <li>Web search, Wikipedia and page reading, with sources</li>
-              <li>Remembers what you tell it, and tells you it did</li>
-              <li>Shows its plan first for anything with several steps</li>
-              <li>Reads PDFs, Office files, images and code</li>
-              <li>Files and folders, offline Wikipedia, a calculator that doesn't guess</li>
-            </ul>
-          </article>
-          <article class="mode">
-            <header class="mode-head">
-              <span class="mode-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5" /></svg>
-              </span>
-              <h3 class="h3">Code</h3>
-            </header>
-            <p class="body">Small projects, scripts and fixes in your project folder, and it proves they work.</p>
-            <ul class="ticks">
-              <li>Plans, writes the code, runs the tests, retries until they pass</li>
-              <li>"Done" only when the plan's own tests pass</li>
-              <li>Looks at the pages it builds, at desktop and phone width</li>
-              <li>Finds unreadable text, overflow, broken images and dead links</li>
-              <li>Matches a design you point it at</li>
-              <li>Every task can be undone, all at once or file by file</li>
-            </ul>
-          </article>
+      <!-- It looks at its work -->
+      <section class="scene looks wrap" id="looks">
+        <div class="scene-copy">
+          <p class="eyebrow">Code</p>
+          <h2 class="mega">It checks<br />its own <em>work.</em></h2>
+          <p class="lede">
+            Ask for a website and it plans it, writes it and runs the tests. Then it opens the page at desktop and phone width,
+            measures the screenshots, marks each problem where it is, and fixes it before you look.
+          </p>
         </div>
-
-        <!-- Page check, drawn -->
-        <div class="split split-rev">
-          <div class="split-copy">
-            <p class="eyebrow">Page check</p>
-            <h3 class="h2">It looks at what it built.</h3>
-            <p class="body">
-              After a frontend change, Aldergrove renders the page out of sight, takes screenshots and measures them.
-              Each problem it finds is boxed where it is on the page and sent back to be fixed.
-            </p>
-          </div>
-          <div class="shot" aria-label="A screenshot with two problems marked">
-            <div class="shot-page">
+        <div class="scene-visual">
+          <div class="shot shot-live" aria-label="A screenshot with two problems marked">
+            <div class="shot-page" aria-hidden="true">
               <div class="sp-nav"><b></b><i></i><i></i><i></i></div>
               <div class="sp-hero"><b></b><b class="short"></b></div>
               <div class="sp-cards"><i></i><i></i><i class="low"></i></div>
@@ -229,57 +180,27 @@
             <span class="shot-mark m2"><em>Wider than the screen</em></span>
           </div>
         </div>
-
-      <p class="more"><a class="more-link" href="./product/index.html">See everything Aldergrove does <span aria-hidden="true">&rarr;</span></a></p>
       </section>
 
-      <!-- Research -->
-      <section class="section wrap" id="research">
-        <p class="eyebrow">Research</p>
-        <h2 class="h1">Measured, <em>not</em> claimed.</h2>
-        <p class="lede narrow">
-          Every default in Aldergrove comes from a lab run on real hardware: fixed coding tasks with hidden tests,
-          and real Chat questions graded right or wrong. We publish the numbers with the machine they came from.
-        </p>
-        <div class="table-wrap">
-          <table class="results">
-            <caption>Apple M1 Max, 64 GB &middot; November 2026</caption>
-            <thead>
-              <tr><th scope="col">Model</th><th scope="col">Engine</th><th scope="col">Chat lab</th><th scope="col">Coding tests</th></tr>
-            </thead>
-            <tbody>
-              <tr class="is-default"><td>Inkling 2 Mini 8-bit <span class="badge">Default at 64 GB</span></td><td>Aldergrove runner</td><td>13 / 13 right &middot; median 147 s</td><td>58 / 71</td></tr>
-              <tr><td>Inkling 2 Mini 4-bit</td><td>Aldergrove runner</td><td>8 / 8 that ran</td><td>66 / 71</td></tr>
-              <tr><td>Inkling 2 Mini 3-bit</td><td>PolyStrata (test)</td><td>not yet</td><td>63 / 71</td></tr>
-              <tr><td>Qwen3.8 27B 8-bit</td><td>Aldergrove runner</td><td>12 / 13 right &middot; median 153 s</td><td>21 / 71</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="method">
-          <div><p class="mono faint">01</p><h4 class="h4">Hidden tests</h4><p class="body sm">The model never sees the tests it's graded on.</p></div>
-          <div><p class="mono faint">02</p><h4 class="h4">Real questions</h4><p class="body sm">Facts, maths, files, memory, and things that don't exist.</p></div>
-          <div><p class="mono faint">03</p><h4 class="h4">Hardware named</h4><p class="body sm">Every speed comes with the computer it ran on.</p></div>
-        </div>
-      <p class="more"><a class="more-link" href="./research/index.html">Read all the research <span aria-hidden="true">&rarr;</span></a></p>
+      <!-- Privacy, said three ways -->
+      <section class="trio wrap" aria-label="Privacy">
+        <p class="trio-line">Your data stays<br />on <em>your</em> Mac.</p>
+        <p class="fine trio-fine">With a local model, your chats, files and memory never leave your Mac. Web search, connected apps and an optional cloud model reach the internet only when you use them.</p>
       </section>
 
-      <!-- Privacy -->
-      <section class="section wrap" id="privacy">
-        <div class="privacy">
-          <div>
-            <p class="eyebrow">Privacy</p>
-            <h2 class="h1">Your computer. <em>Your</em> data.</h2>
-          </div>
-          <ul class="pledges">
-            <li><b>Runs locally.</b> With a local model, your chats, files and memory stay on your computer.</li>
-            <li><b>No account.</b> Nothing to sign up for, and it works offline.</li>
-            <li><b>No ads, no selling data, no training on what you do.</b></li>
-            <li><b>Sign-ins in your keychain.</b> Mail and calendar access stays in the Mac's keychain.</li>
-            <li><b>Reports only when you say so.</b> Error reports are off by default, and you read the exact text first.</li>
-            <li><b>Cloud is your choice.</b> Bring your own keys if you want a cloud model; the chat says what it costs.</li>
-          </ul>
-        </div>
-      <p class="more"><a class="more-link" href="./privacy/index.html">What stays on your Mac, and what doesn't <span aria-hidden="true">&rarr;</span></a></p>
+      <!-- The numbers -->
+      <section class="specs wrap" aria-label="Aldergrove in numbers">
+        <div class="spec-cell"><p class="spec-num">$0</p><p class="spec-label">a month to run, on your Mac</p></div>
+        <div class="spec-cell"><p class="spec-num">1</p><p class="spec-label">button to set up the right model</p></div>
+        <div class="spec-cell"><p class="spec-num">~2&times;</p><p class="spec-label">faster than Ollama on the same Mac</p></div>
+        <div class="spec-cell"><p class="spec-num">0</p><p class="spec-label">accounts to make</p></div>
+      </section>
+
+      <!-- Go deeper -->
+      <section class="deeper wrap" aria-label="More about Aldergrove">
+        <a class="deep-card" href="./product/index.html"><p class="eyebrow">Product</p><p class="deep-title">Everything it does</p><p class="deep-text">Mail, schedules, answers you can check, code, and the page check.</p><span class="deep-go" aria-hidden="true">&rarr;</span></a>
+        <a class="deep-card" href="./research/index.html"><p class="eyebrow">Research</p><p class="deep-title">Measured, not claimed</p><p class="deep-text">Every lab run, the models we tried, and what we haven't settled.</p><span class="deep-go" aria-hidden="true">&rarr;</span></a>
+        <a class="deep-card" href="./privacy/index.html"><p class="eyebrow">Privacy</p><p class="deep-title">What stays, what leaves</p><p class="deep-text">Each feature that uses the internet, what it sends, and to whom.</p><span class="deep-go" aria-hidden="true">&rarr;</span></a>
       </section>
 
       <!-- Get -->
@@ -288,7 +209,7 @@
         <div class="wrap get-inner">
           <span class="mark mark-lg" data-mark></span>
           <h2 class="display sm">Aldergrove for Mac</h2>
-          <p class="lede">Free, for Macs with Apple silicon. Windows comes after the Mac release.</p>
+          <p class="lede">Free, for Macs with Apple silicon. Join the beta and we'll email you when it opens.</p>
           <form class="signup" id="signup" novalidate>
             <div class="signup-fields">
               <label class="field field-email" for="signup-email">
