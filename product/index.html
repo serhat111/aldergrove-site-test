@@ -6,8 +6,8 @@
     <title>Product · Aldergrove</title>
     <meta name="description" content="Everything Aldergrove does: one model set up for your computer, answers you can check, errands that ask first, and code that's tested before it's called done." />
     <link rel="icon" type="image/svg+xml" href="../mark.svg" />
-    <script type="module" crossorigin src="../assets/main-DprTvorV.js"></script>
-    <link rel="stylesheet" crossorigin href="../assets/main-CiTaa-Jf.css">
+    <script type="module" crossorigin src="../assets/main-BwPSLz-D.js"></script>
+    <link rel="stylesheet" crossorigin href="../assets/main-Dr3fT0qS.css">
   </head>
   <body class="page-sub">
     <header class="nav" id="top">
@@ -43,6 +43,7 @@
         <aside class="rail" aria-label="Chapters">
           <ol>
             <li><a href="#errands" data-chapter="errands">Everyday jobs</a></li>
+            <li><a href="#home" data-chapter="home">On the home screen</a></li>
             <li><a href="#answers" data-chapter="answers">Answers you can check</a></li>
             <li><a href="#setup" data-chapter="setup">Set up for you</a></li>
             <li><a href="#code" data-chapter="code">Code that's checked</a></li>
@@ -94,11 +95,45 @@
             </div>
           </section>
 
-          <!-- 2. Answers -->
-          <section class="chapter" id="answers">
+          <!-- 2. On the home screen (experimental) -->
+          <section class="chapter" id="home">
             <div class="feature-big flip reveal">
               <div class="fb-copy">
-                <p class="eyebrow"><span class="ch-num">02</span> Answers you can check</p>
+                <p class="eyebrow"><span class="ch-num">02</span> On the home screen <span class="badge">Experimental</span></p>
+                <h2 class="h1">Your day on <em>one line.</em> Hand it anything.</h2>
+                <p class="body">
+                  The new-chat screen shows your day as one line from morning to morning: what Aldergrove did, what's coming, and
+                  tonight's list, each kind with its own mark. Drop an email, file, folder or link on the window and it asks what
+                  to do with it. Both are being tested now and may change.
+                </p>
+              </div>
+              <div class="fb-visual">
+                <div class="dl-demo static" aria-label="The day line: 4 done, 3 coming up, 1 needs you">
+          <div class="dl-head"><span class="dl-title">Today</span><span class="dl-summary">3 done &middot; 3 coming up &middot; 1 needs you</span></div>
+          <div class="dl-track" aria-hidden="true">
+            <div class="dl-rail"></div>
+            <div class="dl-past"></div>
+            <div class="dl-night"><span>Tonight</span></div>
+            <div class="dl-now"><span>now</span></div>
+            <span class="dl-mark done" style="left:8.3%;--n:0" title="08:00 Scheduled: unanswered mail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 3.5 20 6.5l-3 3M20 6.5H8a4 4 0 0 0-4 4v1M7 20.5 4 17.5l3-3M4 17.5h12a4 4 0 0 0 4-4v-1"/></svg></span><span class="dl-mark done" style="left:14.6%;--n:1" title="09:30 Check-in"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H9l-4 4z"/></svg></span><span class="dl-mark done" style="left:23.6%;--n:2" title="11:40 Reminder: call the bakery"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5a2.2 2.2 0 0 0 4 0"/></svg></span><span class="dl-mark needs" style="left:37.5%;--n:3" title="15:00 Follow-up: Dana hasn't replied"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 8 5 12.5l5 4.5M5.5 12.5H14a5 5 0 0 1 5 5V19"/></svg></span><span class="dl-mark coming" style="left:47.9%;--n:4" title="17:30 Reminder"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5a2.2 2.2 0 0 0 4 0"/></svg></span><span class="dl-mark coming" style="left:52.1%;--n:5" title="18:30 Scheduled: tomorrow's meetings"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 3.5 20 6.5l-3 3M20 6.5H8a4 4 0 0 0-4 4v1M7 20.5 4 17.5l3-3M4 17.5h12a4 4 0 0 0 4-4v-1"/></svg></span><span class="dl-mark coming" style="left:70.8%;--n:6" title="23:00 Tonight's list"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><b>2</b></span>
+          </div>
+          <div class="dl-ticks" aria-hidden="true"><span style="left:0%">6 am</span><span style="left:12.5%">9 am</span><span style="left:25%">noon</span><span style="left:37.5%">3 pm</span><span style="left:50%">6 pm</span><span style="left:62.5%">9 pm</span><span style="left:75%">midnight</span><span style="left:87.5%">3 am</span><span style="left:100%">6 am</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-small reveal"><h3>The day line</h3><p>Reminders, follow-ups, scheduled jobs, check-ins and tonight's list on one line. Hover a mark for details and Open.</p></div>
+              <div class="feature-small reveal"><h3>See where it lands</h3><p>Type "remind me at 8" and a dashed mark shows where it will go before you send it.</p></div>
+              <div class="feature-small reveal"><h3>Hand it over</h3><p>Drop an email and pick Draft a reply, Summarise or Remind me tomorrow. A folder: What's in here? or Suggest a tidy-up.</p></div>
+              <div class="feature-small reveal"><h3>Nothing by itself</h3><p>Hand-over answers never send mail or move files; anything final still waits for your OK.</p></div>
+            </div>
+          </section>
+
+          <!-- 2. Answers -->
+          <section class="chapter" id="answers">
+            <div class="feature-big reveal">
+              <div class="fb-copy">
+                <p class="eyebrow"><span class="ch-num">03</span> Answers you can check</p>
                 <h2 class="h1">It looks things up, and <em>shows</em> where.</h2>
                 <p class="body">
                   Web search, Wikipedia and page reading, with the sources on every answer. Each step is one plain row with how
@@ -131,9 +166,9 @@
 
           <!-- 3. Setup -->
           <section class="chapter" id="setup">
-            <div class="feature-big reveal">
+            <div class="feature-big flip reveal">
               <div class="fb-copy">
-                <p class="eyebrow"><span class="ch-num">03</span> Set up for you</p>
+                <p class="eyebrow"><span class="ch-num">04</span> Set up for you</p>
                 <h2 class="h1">One button. The right model for <em>your</em> Mac.</h2>
                 <p class="body">
                   Aldergrove reads how much memory your computer has, picks the version of Linden 1 that fits with room
@@ -168,9 +203,9 @@
 
           <!-- 4. Code -->
           <section class="chapter" id="code">
-            <div class="feature-big flip reveal">
+            <div class="feature-big reveal">
               <div class="fb-copy">
-                <p class="eyebrow"><span class="ch-num">04</span> Code that's checked</p>
+                <p class="eyebrow"><span class="ch-num">05</span> Code that's checked</p>
                 <h2 class="h1">Done means the <em>tests</em> pass.</h2>
                 <p class="body">
                   Best for small projects, scripts and fixes. In Code, one model plans, writes the code and runs the tests itself,
@@ -209,9 +244,9 @@
 
           <!-- 5. Looks -->
           <section class="chapter" id="looks">
-            <div class="feature-big reveal">
+            <div class="feature-big flip reveal">
               <div class="fb-copy">
-                <p class="eyebrow"><span class="ch-num">05</span> It looks at its work</p>
+                <p class="eyebrow"><span class="ch-num">06</span> It looks at its work</p>
                 <h2 class="h1">It opens the page it built, and <em>measures</em> it.</h2>
                 <p class="body">
                   After a frontend change, Aldergrove renders the page at desktop and phone width, takes screenshots and checks
@@ -239,9 +274,9 @@
 
           <!-- 6. Control -->
           <section class="chapter" id="control">
-            <div class="feature-big flip reveal">
+            <div class="feature-big reveal">
               <div class="fb-copy">
-                <p class="eyebrow"><span class="ch-num">06</span> You stay in control</p>
+                <p class="eyebrow"><span class="ch-num">07</span> You stay in control</p>
                 <h2 class="h1">Everything running, <em>one</em> Stop button.</h2>
                 <p class="body">
                   Running now lists everything Aldergrove has going: chats, background tasks, schedules. Stop means stop, and
