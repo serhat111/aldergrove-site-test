@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy · Aldergrove</title>
+    <meta name="description" content="What stays on your computer, what leaves it and only when you use it, and what Aldergrove never does." />
+    <link rel="icon" type="image/svg+xml" href="../mark.svg" />
+    <script type="module" crossorigin src="../assets/main-C0knNbUG.js"></script>
+    <link rel="stylesheet" crossorigin href="../assets/main-D6aEWWJ7.css">
+  </head>
+  <body class="page-sub">
+    <header class="nav" id="top">
+      <nav class="nav-links" aria-label="Pages">
+        <a href="../index.html#linden">Linden 1</a>
+        <a href="../product/index.html">Product</a>
+        <a href="../research/index.html">Research</a>
+        <a href="../privacy/index.html" aria-current="page">Privacy</a>
+      </nav>
+      <a class="brand" href="../index.html" aria-label="Aldergrove home">
+        <span class="mark" data-mark></span>
+        <span class="wordmark">Aldergrove</span>
+      </a>
+      <div class="nav-end">
+        <a class="btn btn-ink btn-sm" href="../index.html#get">Get Aldergrove</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="sub-hero wrap">
+        <p class="eyebrow reveal">Privacy</p>
+        <h1 class="display reveal">Your computer. <em>Your</em> data.</h1>
+        <p class="lede reveal">
+          Aldergrove has no account and no server of its own. With a local model, your chats are written and answered on
+          your computer, and we never see them. Some features do reach the internet when you use them; this page lists
+          every one, what it sends, and to whom.
+        </p>
+      </section>
+
+      <!-- Where your data goes, drawn -->
+      <section class="wrap">
+        <dl class="spec reveal">
+          <div>
+            <dt>Stays on your Mac</dt>
+            <dd>Chats and replies, memory and the notebook, files you add, meeting audio and transcripts, voice, documents, the model itself, and your sign-ins.</dd>
+          </div>
+          <div>
+            <dt>Leaves only when you use it</dt>
+            <dd>Web search, pages and Wikipedia online, maps and photos, your connected apps, and a cloud model if you choose one.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <div class="notes wrap">
+        <article class="note" id="stays">
+          <header class="note-head reveal">
+            <p class="eyebrow">01</p>
+            <h2 class="h1">What stays on your computer</h2>
+          </header>
+          <div class="note-body">
+            <dl class="fail-list reveal">
+              <div><dt>Your chats</dt><dd>With a local model, every message and reply is made on your Mac and saved there. Temporary chats aren't saved at all.</dd></div>
+              <div><dt>What it remembers</dt><dd>Memory, your profile and the nightly notebook are files on your Mac. You can read and edit them in Aldergrove, and "forget" removes a memory.</dd></div>
+              <div><dt>Your files</dt><dd>Aldergrove only reads folders you add to a chat. It moves files to the Bin rather than deleting them.</dd></div>
+              <div><dt>Meetings and voice</dt><dd>Transcripts and speech are made on your Mac. Audio isn't sent anywhere.</dd></div>
+              <div><dt>Sign-ins</dt><dd>Mail and calendar sign-ins are kept in the Mac's keychain. Code mode never sees them.</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="note" id="leaves">
+          <header class="note-head reveal">
+            <p class="eyebrow">02</p>
+            <h2 class="h1">What leaves, and only when you use it</h2>
+          </header>
+          <div class="note-body">
+            <p class="body reveal">These features need the internet. Each one sends only what it needs, and only when you or your request uses it.</p>
+            <div class="table-wrap reveal">
+              <table class="results">
+                <thead><tr><th scope="col">When you use</th><th scope="col">What is sent</th><th scope="col">To</th></tr></thead>
+                <tbody>
+                  <tr><td>Web search</td><td>The search words</td><td>Exa, the search service</td></tr>
+                  <tr><td>Reading a page or Wikipedia online</td><td>The page address</td><td>That website</td></tr>
+                  <tr><td>Places and maps</td><td>The place or area you asked about</td><td>OpenStreetMap</td></tr>
+                  <tr><td>Photos of a place</td><td>The search words</td><td>Wikimedia Commons</td></tr>
+                  <tr><td>Mail, calendar, Drive</td><td>Requests made with your sign-in</td><td>Google or Microsoft</td></tr>
+                  <tr><td>Notion, Slack, GitHub</td><td>Requests made with your sign-in</td><td>That service</td></tr>
+                  <tr><td>Your own Chrome</td><td>What you asked it to do on a site</td><td>That site, from your browser</td></tr>
+                  <tr><td>A cloud model (optional)</td><td>The whole chat</td><td>The provider you chose</td></tr>
+                  <tr><td>Downloads</td><td>A download request, nothing about you</td><td>Hugging Face (models), Kiwix (Wikipedia packs), GitHub (the engine)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="fine reveal">
+              Want none of it? Download a Wikipedia pack and Aldergrove answers from it with no internet at all. Turn off
+              Wi-Fi and everything on your Mac keeps working.
+            </p>
+          </div>
+        </article>
+
+        <article class="note" id="cloud">
+          <header class="note-head reveal">
+            <p class="eyebrow">03</p>
+            <h2 class="h1">Cloud models are your choice</h2>
+          </header>
+          <div class="note-body">
+            <p class="body reveal">
+              Aldergrove works without any cloud model. If you add one with your own key, chats that use it go to that provider
+              under their terms, and the chat says so: the status line changes from "Running on your Mac" to "Cloud model". We
+              never call a chat private if it used a cloud model.
+            </p>
+            <div class="vis vis-status reveal" aria-hidden="true">
+              <p><i class="dot-local"></i>Running on your Apple M1 Max <b>&middot;</b> stays on this computer</p>
+              <p><i class="dot-cloud"></i>Cloud model <b>&middot;</b> messages go to the provider you chose</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="note" id="never">
+          <header class="note-head reveal">
+            <p class="eyebrow">04</p>
+            <h2 class="h1">What we never do</h2>
+          </header>
+          <div class="note-body">
+            <ul class="pledges reveal">
+              <li><b>No account.</b> There's nothing to sign up for to use Aldergrove.</li>
+              <li><b>No analytics or tracking in the app.</b> It doesn't report what you do, which features you use, or how often.</li>
+              <li><b>No ads, and no selling data.</b></li>
+              <li><b>No training on what you do.</b> Your chats and files are never used to train a model.</li>
+              <li><b>No passwords typed for you.</b> In Chrome, Aldergrove never types passwords or card numbers.</li>
+              <li><b>Nothing final without you.</b> Sending, posting, booking and deleting wait for you to press the button.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="note" id="reports">
+          <header class="note-head reveal">
+            <p class="eyebrow">05</p>
+            <h2 class="h1">Error reports and updates</h2>
+          </header>
+          <div class="note-body">
+            <dl class="fail-list reveal">
+              <div><dt>Error reports are off</dt><dd>When something breaks, the error stays on your Mac. You can read the exact report and send it yourself. It has no chat text or file contents. If you turn on automatic reports, they're sent without asking.</dd></div>
+              <div><dt>Updates wait for a click</dt><dd>Aldergrove checks for an update when you press Check, and downloads when you press Download.</dd></div>
+              <div><dt>Sharing with other devices is off</dt><dd>The phone page and the local API for other programs stay off until you turn them on, and only work on your own network.</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="note" id="site">
+          <header class="note-head reveal">
+            <p class="eyebrow">06</p>
+            <h2 class="h1">This website</h2>
+          </header>
+          <div class="note-body">
+            <p class="body reveal">
+              This site has no tracking or analytics. If you join the beta list, your email and your Mac's memory size go to
+              Formspree, which collects the form for us. We use them only to email you about the beta, and you can ask to be
+              removed at any time.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <section class="get" id="get">
+        <div class="get-scene" aria-hidden="true"></div>
+        <div class="wrap get-inner">
+          <span class="mark mark-lg" data-mark></span>
+          <h2 class="display sm">Private by default</h2>
+          <p class="lede">Aldergrove for Mac is free. Join the beta list and we'll email you when it opens.</p>
+          <div class="cta-row center">
+            <a class="btn btn-accent" href="../index.html#get">Join the Mac beta</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot wrap">
+      <span class="brand brand-foot"><span class="mark mark-sm" data-mark></span><span class="wordmark">Aldergrove</span></span>
+      <span class="faint">&copy; 2026 Aldergrove</span>
+      <span class="mono faint">Last light over the ridge</span>
+    </footer>
+
+  </body>
+</html>

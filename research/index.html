@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research · Aldergrove</title>
+    <meta name="description" content="How we test Aldergrove: hidden-test coding labs, graded Chat questions and engine speed tests, with every result and the computer it ran on." />
+    <link rel="icon" type="image/svg+xml" href="../mark.svg" />
+    <script type="module" crossorigin src="../assets/main-C0knNbUG.js"></script>
+    <link rel="stylesheet" crossorigin href="../assets/main-D6aEWWJ7.css">
+  </head>
+  <body class="page-sub">
+    <header class="nav" id="top">
+      <nav class="nav-links" aria-label="Pages">
+        <a href="../index.html#linden">Linden 1</a>
+        <a href="../product/index.html">Product</a>
+        <a href="../research/index.html" aria-current="page">Research</a>
+        <a href="../privacy/index.html">Privacy</a>
+      </nav>
+      <a class="brand" href="../index.html" aria-label="Aldergrove home">
+        <span class="mark" data-mark></span>
+        <span class="wordmark">Aldergrove</span>
+      </a>
+      <div class="nav-end">
+        <a class="btn btn-ink btn-sm" href="../index.html#get">Get Aldergrove</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="sub-hero wrap">
+        <p class="eyebrow reveal">Research</p>
+        <h1 class="display reveal">Measured, <em>not</em> claimed.</h1>
+        <p class="lede reveal">
+          Every default in Aldergrove comes from a lab run on real hardware. This page has all of it: how we test,
+          what we found, what surprised us, and what we haven't settled yet. Numbers come with the computer they ran on,
+          and one run is never treated as a verdict.
+        </p>
+      </section>
+
+      <!-- Index -->
+      <section class="wrap">
+        <ol class="index reveal" aria-label="Notes on this page">
+          <li><a href="#method"><span class="mono faint">Method</span><b>How the labs work</b></a></li>
+          <li><a href="#linden"><span class="mono faint">Nov 24&ndash;26</span><b>Choosing Linden 1</b></a></li>
+          <li><a href="#bits"><span class="mono faint">Nov 26</span><b>8-bit or 4-bit?</b></a></li>
+          <li><a href="#engines"><span class="mono faint">Nov 25&ndash;26</span><b>The engine matters more than the file</b></a></li>
+          <li><a href="#wait"><span class="mono faint">Nov 25</span><b>Why the first reply is slow</b></a></li>
+          <li><a href="#stop"><span class="mono faint">Nov 25</span><b>Checked stop</b></a></li>
+          <li><a href="#reruns"><span class="mono faint">Nov 7&ndash;17</span><b>One run proves little</b></a></li>
+          <li><a href="#plans"><span class="mono faint">Nov 7&ndash;17</span><b>Where the score comes from</b></a></li>
+          <li><a href="#cloud"><span class="mono faint">Nov 14</span><b>Local against cloud</b></a></li>
+          <li><a href="#fail"><span class="mono faint">Nov 7&ndash;26</span><b>How small models fail</b></a></li>
+          <li><a href="#review"><span class="mono faint">Nov 26</span><b>What real use taught us</b></a></li>
+          <li><a href="#open"><span class="mono faint">Now</span><b>Open questions</b></a></li>
+        </ol>
+      </section>
+
+      <div class="notes wrap">
+        <!-- Method -->
+        <article class="note" id="method">
+          <header class="note-head reveal">
+            <p class="eyebrow">Method</p>
+            <h2 class="h1">How the labs work</h2>
+          </header>
+          <div class="note-body">
+            <p class="body reveal">We run three kinds of test, all on the computer the result is for. Unless a section says otherwise, it's an Apple M1 Max with 64 GB of memory.</p>
+            <div class="method-grid reveal">
+              <div><p class="mono faint">Coding lab</p><h3 class="h4">Five tasks, 71 hidden tests</h3><p class="body sm">The model plans and writes the code alone, in a fresh folder. It never sees the tests it's graded on: invoice (17), recurrence (17), spreadsheet (17), fix-inventory (9) and todo-priority (11).</p></div>
+              <div><p class="mono faint">Chat lab</p><h3 class="h4">13 real questions</h3><p class="body sm">Facts, maths, files, memory, and questions about things that don't exist. Each answer is graded right or wrong, with the time to first words and to the end.</p></div>
+              <div><p class="mono faint">Speed test</p><h3 class="h4">Same prompts, every engine</h3><p class="body sm">300-word-piece replies on code and prose, and a 4,500-token prompt to read. Cache off, first try of each, so engines are compared fairly.</p></div>
+            </div>
+            <p class="fine reveal">Everything here is one run per setup unless a section says so. Our own reruns show why that matters: see <a href="#reruns">One run proves little</a>.</p>
+          </div>
+        </article>
+
+        <!-- Choosing Linden 1 -->
+        <article class="note" id="linden">
+          <header class="note-head reveal">
+            <p class="eyebrow">November 24&ndash;26, 2026</p>
+            <h2 class="h1">Choosing Linden 1</h2>
+          </header>
+          <div class="note-body">
+            <p class="body reveal">
+              Linden 1 is Inkling 2 Mini, a mixture-of-experts model, run by Aldergrove. We picked it after putting every
+              model that fits a 64 GB Mac through the same coding lab. No coding-tuned model beat it.
+            </p>
+            <div class="table-wrap reveal">
+              <table class="results wide">
+                <caption>Coding lab &middot; hidden tests passed per task &middot; M1 Max, 64 GB</caption>
+                <thead><tr><th scope="col">Model</th><th scope="col">Invoice</th><th scope="col">Recurrence</th><th scope="col">Spreadsheet</th><th scope="col">Inventory</th><th scope="col">Todo</th><th scope="col">Total</th><th scope="col">Time</th></tr></thead>
+                <tbody>
+                  <tr class="is-default"><td>Inkling 2 Mini, 4-bit IQ4_NL</td><td>17/17</td><td>16/17</td><td>16/17</td><td>9/9</td><td>8/11</td><td><b>66/71</b></td><td>84 min</td></tr>
+                  <tr class="is-default"><td>Inkling 2 Mini, 8-bit</td><td>17/17</td><td>17/17</td><td>5/17</td><td>9/9</td><td>10/11</td><td><b>58/71</b></td><td>84 min</td></tr>
+                  <tr><td>Inkling 2 Mini, 3-bit (PolyStrata engine)</td><td>16/17</td><td>12/17</td><td>15/17</td><td>9/9</td><td>11/11</td><td>63/71</td><td>52 min</td></tr>
+                  <tr><td>Flint 40B-A2.5B, 4-bit</td><td>17/17</td><td>14/17</td><td>2/17</td><td>8/9</td><td>11/11</td><td>52/71</td><td>99 min</td></tr>
+                  <tr><td>Tiel Coder 35B-A3B, 4-bit</td><td>14/17</td><td>6/17</td><td>1/17</td><td>9/9</td><td>11/11</td><td>41/71</td><td>118 min</td></tr>
+                  <tr><td>Qwen3 Coder Next, 4-bit</td><td>12/17</td><td>7/17</td><td>1/17</td><td>8/9</td><td>9/11</td><td>37/71</td><td>101 min</td></tr>
+                  <tr><td>Qwen3.8 27B, 8-bit</td><td>1/17</td><td>0/17</td><td>0/17</td><td>9/9</td><td>11/11</td><td>21/71</td><td>148 min</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-wrap reveal">
+              <table class="results">
+                <caption>Chat lab &middot; 13 questions &middot; M1 Max, 64 GB</caption>
+                <thead><tr><th scope="col">Model</th><th scope="col">Right</th><th scope="col">Right tools</th><th scope="col">Median reply</th><th scope="col">First words</th></tr></thead>
+                <tbody>
+                  <tr class="is-default"><td>Inkling 2 Mini, 8-bit</td><td><b>13 of 13</b></td><td>100%</td><td>147 s</td><td>109 s</td></tr>
+                  <tr><td>Qwen3.8 27B, 8-bit</td><td>12 of 13</td><td>100%</td><td>153 s</td><td>129 s</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="findings reveal">
+              <li>Invoice, recurrence and spreadsheet separate the models. Inventory and todo are easy: almost everyone passes them.</li>
+              <li>Qwen3.8 got the honesty question wrong: it searched for 8 minutes for a Nobel Prize that was never awarded. Inkling said so.</li>
+              <li>Qwen3.8 read 43 files in one coding task and wrote none. That run is why Aldergrove now steps in after 20 reads with no change.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Bits -->
+        <article class="note" id="bits">
+          <header class="note-head reveal">
+            <p class="eyebrow">November 26, 2026</p>
+            <h2 class="h1">8-bit or 4-bit?</h2>
+          </header>
+          <div class="note-body">
+            <p class="body reveal">
+              A smaller file leaves more memory for everything else, so we tested whether Linden 1 loses anything at 4-bit.
+              On one run each, it didn't.
+            </p>
+            <div class="compare reveal">
+              <div class="cmp"><p class="mono faint">8-bit</p><p class="cmp-num">58<span>/71</span></p><p class="cmp-sub">26 GB &middot; 18.7 tokens a second</p></div>
+              <div class="cmp"><p class="mono faint">4-bit IQ4_NL</p><p class="cmp-num">66<span>/71</span></p><p class="cmp-sub">16 GB &middot; 20.5 tokens a second</p></div>
+            </div>
+            <ul class="findings reveal">
+              <li>The 8-point gap is inside what a rerun alone can move, so we read it as "no loss", not "4-bit is better".</li>
+              <li>In the Chat lab, every 4-bit answer that finished was right. Five were cut off when the Mac went to sleep, so that run doesn't count yet.</li>
+              <li>So Macs with 32 to 48 GB get the 4-bit file, and Macs with 64 GB or more get 8-bit or better. The 3-run repeats are next.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Engines -->
+        <article class="note" id="engines">
+          <header class="note-head reveal">
+            <p class="eyebrow">November 25&ndash;26, 2026</p>
+            <h2 class="h1">The engine matters more than the file</h2>
+          </header>
+          <div class="note-body">
+            <p class="body reveal">
+              We ran the same Inkling files in two engines: llama.cpp, which Aldergrove's runner uses today, and PolyStrata,
+              a newer engine built for this kind of model. Speeds are word-pieces (tokens) a second.
+            </p>
+            <div class="bars reveal" aria-label="Writing speed, tokens per second">
+              <p class="bars-cap mono faint">Writing speed on prose &middot; tokens a second</p>
+              <div class="bar"><span class="bar-label">llama.cpp &middot; 3-bit</span><span class="bar-track"><i style="--w: 26%"></i></span><span class="bar-val">7.8</span></div>
+              <div class="bar"><span class="bar-label">llama.cpp &middot; 8-bit</span><span class="bar-track"><i style="--w: 62%"></i></span><span class="bar-val">18.7</span></div>
+              <div class="bar"><span class="bar-label">llama.cpp &middot; 4-bit IQ4_NL</span><span class="bar-track"><i style="--w: 68%"></i></span><span class="bar-val">20.5</span></div>
+              <div class="bar is-accent"><span class="bar-label">PolyStrata &middot; 3-bit</span><span class="bar-track"><i style="--w: 85%"></i></span><span class="bar-val">25.5</span></div>
+            </div>
+            <div class="table-wrap reveal">
+              <table class="results">
+                <caption>Reading a 4,500-token prompt &middot; tokens a second</caption>
+                <thead><tr><th scope="col">Engine and file</th><th scope="col">Size</th><th scope="col">Read</th></tr></thead>
+                <tbody>
+                  <tr><td>llama.cpp, 8-bit</td><td>26 GB</td><td>157</td></tr>
+                  <tr><td>llama.cpp, 4-bit IQ4_NL</td><td>16 GB</td><td>155</td></tr>
+                  <tr><td>llama.cpp, 4-bit UD-Q4_K_XL</td><td>16 GB</td><td>48</td></tr>
+                  <tr><td>llama.cpp, 3-bit UD-Q3_K_XL</td><td>14 GB</td><td>53</td></tr>
+                  <tr class="is-default"><td>PolyStrata, 3-bit UD-Q3_K_XL</td><td>14 GB</td><td><b>309</b></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="findings reveal">
+              <li><b>The same 3-bit file writes 2.8 times and reads 5.8 times faster in PolyStrata.</b> Against our 8-bit, it writes about 35% faster and reads about twice as fast.</li>
+              <li><b>On this Mac, llama.cpp runs "K" files at half speed.</b> IQ4_NL, a non-K 4-bit, is a little faster than 8-bit; the popular UD-Q4_K_XL is the slow kind here. "4-bit is faster" depends on the file type.</li>
+              <li><b>The draft model adds little.</b> PolyStrata can use a small draft model to guess ahead: about 16% faster on code (25.9 to 29.9), where most guesses are kept, and nothing on prose.</li>
+              <li><b>PolyStrata reuses what it has already read.</b> In the coding lab it reused 34K of a 39K prompt between turns. Inkling's memory of a prompt can't be trimmed in llama.cpp, so a changed tool list there means reading everything again.</li>
+              <li>PolyStrata needed one fix to run on the M1 Max (a graphics program asked for more threads than this chip allows). After that, no crashes in 52 minutes of lab work.</li>
+              <li>Early, partial: PolyStrata with the 4-bit file passed invoice 17/17 in 9 minutes and recurrence 16/17 in 10, about twice as fast as the same tasks on llama.cpp. The full run is next.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Wait -->
+        <article class="note" id="wait">
+          <header class="note-head reveal">
+            <p class="eyebrow">November 25, 2026</p>
+            <h2 class="h1">Why the first reply is slow</h2>
+          </header>
+          <div class="note-body">
+            <p class="body reveal">
+              A new chat waits about two minutes for its first words, and writing speed isn't the reason. Before answering,
+              the model reads Aldergrove's setup: about 12,000 tokens describing every tool it can use. At 160 tokens a second,
+              that's over a minute of reading before the first word.
+            </p>
+            <p class="bars-cap mono faint tl-cap">A cold first reply, roughly</p>
+            <div class="timeline reveal" aria-label="Where the first reply's time goes">
+              <span class="tl tl-load" style="--w: 14%"><em>Load</em></span>
+              <span class="tl tl-read" style="--w: 63%"><em>Read the setup, 12K tokens</em></span>
+              <span class="tl tl-write" style="--w: 23%"><em>Write</em></span>
+            </div>
+            <ul class="findings reveal">
+              <li>What we did: a new chat now starts with only the everyday tools and adds mail, Chrome or files when you ask. A first "hi" starts about three times sooner.</li>
+              <li>What's next: warm start, reading the setup once ahead of time so a new chat begins in seconds.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Checked stop -->
+        <article class="note" id="stop">
+          <header class="note-head reveal">
+            <p class="eyebrow">November 25, 2026</p>
+            <h2 class="h1">Checked stop</h2>
+          </header>
+          <div class="note-body">
+            <p class="body reveal">
+              Small models often say "done" while hidden tests still fail. With checked stop, a task only ends when the plan's
+              own tests pass and every file the plan names exists. On the hardest task, spreadsheet, that was the difference:
+            </p>
+            <div class="compare reveal">
+              <div class="cmp"><p class="mono faint">Without</p><p class="cmp-num">0&ndash;5<span>/17</span></p><p class="cmp-sub">most models, without it</p></div>
+              <div class="cmp is-accent"><p class="mono faint">With checked stop</p><p class="cmp-num">16<span>/17</span></p><p class="cmp-sub">Inkling 8-bit</p></div>
+            </div>
+            <p class="fine reveal">Aldergrove's Code mode now ends tasks this way. PolyStrata's 3-bit run also reached 15/17 on spreadsheet; its next run adds checked stop.</p>
+          </div>
+        </article>
+
+        <!-- Reruns -->
+        <article class="note" id="reruns">
+          <header class="note-head reveal">
+            <p class="eyebrow">November 7&ndash;17, 2026 &middot; Windows PC</p>
+            <h2 class="h1">One run proves little</h2>
+          </header>
+          <div class="note-body">
+            <p class="body reveal">
+              The same setup scored 16 of 17 on the spreadsheet in one batch and 5 of 17 in another. A rerun alone has moved a
+              score by 8 to 12 tests. So we only trust differences bigger than that, and close calls get three runs.
+            </p>
+            <div class="dots-row reveal" aria-label="Same setup, two runs: 16 of 17, then 5 of 17">
+              <div><span class="mono faint">Run A</span><span class="dots">&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;<s>&#9679;</s></span><b>16/17</b></div>
+              <div><span class="mono faint">Run B</span><span class="dots">&#9679;&#9679;&#9679;&#9679;&#9679;<s>&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;</s></span><b>5/17</b></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Plans -->
+        <article class="note" id="plans">
+          <header class="note-head reveal">
+            <p class="eyebrow">November 7&ndash;17, 2026 &middot; Windows PC</p>
+            <h2 class="h1">Where the score comes from</h2>
+          </header>
+          <div class="note-body">
+            <p class="body reveal">A written plan, with a list of tests and checked steps, is where most of a small model's score comes from.</p>
+            <div class="table-wrap reveal">
+              <table class="results">
+                <caption>Hidden tests passed, with and without a plan</caption>
+                <thead><tr><th scope="col">Model</th><th scope="col">Alone</th><th scope="col">With a plan</th></tr></thead>
+                <tbody>
+                  <tr><td>Qwen3.5 9B</td><td>42/59</td><td><b>58/59</b></td></tr>
+                  <tr><td>Qwen3.6 35B-A3B</td><td>54/59</td><td><b>59/59</b></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="fine reveal">That's why Aldergrove has the model write a plan first, in Code and for any Chat request with several steps.</p>
+          </div>
+        </article>
+
+        <!-- Cloud -->
+        <article class="note" id="cloud">
+          <header class="note-head reveal">
+            <p class="eyebrow">November 14, 2026 &middot; Windows PC</p>
+            <h2 class="h1">Local against cloud</h2>
+          </header>
+          <div class="note-body">
+            <p class="body reveal">
+              We tested whether a cloud model writing the plan and a local model writing the code would beat either alone.
+              Five tasks, 74 hidden tests.
+            </p>
+            <div class="table-wrap reveal">
+              <table class="results">
+                <caption>Study night 1 &middot; 5 tasks, 74 hidden tests</caption>
+                <thead><tr><th scope="col">Team</th><th scope="col">Tests</th><th scope="col">Cost</th><th scope="col">Time</th></tr></thead>
+                <tbody>
+                  <tr><td>Sonnet 5.5 alone (cloud)</td><td>74/74</td><td>$0.75</td><td>5 min</td></tr>
+                  <tr><td>Sonnet plans, Qwen3.6 35B codes</td><td>71/74</td><td>$0.56</td><td>30 min</td></tr>
+                  <tr><td>The same team again</td><td>64/74</td><td>$0.53</td><td>46 min</td></tr>
+                  <tr class="is-default"><td>Qwen3.6 35B alone (local)</td><td>62/74</td><td><b>free</b></td><td>62 min</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="findings reveal">
+              <li>A cloud model alone won the short tasks. The mixed team cost three quarters as much, took six times longer and scored lower.</li>
+              <li>The local model alone passed 84% for nothing, offline. That's why Aldergrove is built around one local model, with cloud models as an option, not a requirement.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Fail -->
+        <article class="note" id="fail">
+          <header class="note-head reveal">
+            <p class="eyebrow">November 7&ndash;26, 2026</p>
+            <h2 class="h1">How small models fail, and what helped</h2>
+          </header>
+          <div class="note-body">
+            <dl class="fail-list reveal">
+              <div><dt>The code is right early, then time runs out</dt><dd>They spend their time writing and rerunning tests until the conversation is full. Plans with a test list, checked steps and trimming old output help.</dd></div>
+              <div><dt>They judge their own work badly</dt><dd>"Done" while hidden tests fail. Tests run by the app, a second attempt and checked stop help.</dd></div>
+              <div><dt>They ask questions nobody answers</dt><dd>In a long task, no one is there. The working rules tell them to decide and note the assumption.</dd></div>
+              <div><dt>They can't see what they build</dt><dd>Measured layout checks, the page tool and boxes drawn on screenshots help.</dd></div>
+              <div><dt>They loop</dt><dd>Reading 43 files without writing one. Aldergrove notes 20 reads with no change and stops at 40.</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <!-- Review -->
+        <article class="note" id="review">
+          <header class="note-head reveal">
+            <p class="eyebrow">November 26, 2026</p>
+            <h2 class="h1">What real use taught us</h2>
+          </header>
+          <div class="note-body">
+            <p class="body reveal">
+              We read every one of our 23 saved test chats and the pages the coding runs built, and fixed what we found the
+              same day. A few of them:
+            </p>
+            <div class="table-wrap reveal">
+              <table class="results">
+                <thead><tr><th scope="col">What happened</th><th scope="col">What changed</th></tr></thead>
+                <tbody>
+                  <tr><td>"Remember that" answered "Noted" without saving</td><td>The app saves it and says so</td></tr>
+                  <tr><td>A trip plan was replaced by the model's own</td><td>Chat keeps the plan you give it</td></tr>
+                  <tr><td>Whole Gmail pages were read three times, about 75 s each</td><td>It pulls just the part it needs</td></tr>
+                  <tr><td>A moved project folder broke every command</td><td>It finds where the folder went</td></tr>
+                  <tr><td>Pictures sent to a model that can't see stalled the chat</td><td>The picture becomes a short note</td></tr>
+                  <tr><td>A preview showed another app's page on a busy port</td><td>The preview checks it's the right page</td></tr>
+                  <tr><td>"You are done" stopped a brand-new request</td><td>Only a plan made for this request can stop it</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="fine reveal">What already worked: sourced facts, a map and route of New York, a four-step job in Chrome from start to end, a phishing email flagged, and pages that built clean.</p>
+          </div>
+        </article>
+
+        <!-- Open -->
+        <article class="note" id="open">
+          <header class="note-head reveal">
+            <p class="eyebrow">Now</p>
+            <h2 class="h1">Open questions</h2>
+          </header>
+          <div class="note-body">
+            <ul class="findings open reveal">
+              <li><b>8-bit against 4-bit, three runs each.</b> One run each says "no loss"; three will say it with confidence.</li>
+              <li><b>Should PolyStrata become Aldergrove's engine?</b> It's much faster, but it's a beta and only runs 3-bit and 4-bit files on a Mac.</li>
+              <li><b>The smaller Macs.</b> The 32, 24 and 16 GB choices follow from the 64 GB results and file sizes. Each gets its own lab.</li>
+              <li><b>Full precision at 128 GB.</b> Not measured yet. If it's too slow, 8-bit goes first there too.</li>
+              <li><b>Warm start.</b> Can a new chat start answering in seconds instead of minutes?</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <section class="get" id="get">
+        <div class="get-scene" aria-hidden="true"></div>
+        <div class="wrap get-inner">
+          <span class="mark mark-lg" data-mark></span>
+          <h2 class="display sm">See it for yourself</h2>
+          <p class="lede">Aldergrove for Mac is free. Join the beta list and we'll email you when it opens.</p>
+          <div class="cta-row center">
+            <a class="btn btn-accent" href="../index.html#get">Join the Mac beta</a>
+            <a class="btn btn-ghost" href="../product/index.html">What it can do</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot wrap">
+      <span class="brand brand-foot"><span class="mark mark-sm" data-mark></span><span class="wordmark">Aldergrove</span></span>
+      <span class="faint">&copy; 2026 Aldergrove</span>
+      <span class="mono faint">Last light over the ridge</span>
+    </footer>
+
+  </body>
+</html>
